@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read It To Me</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>📖 Read It To Me</h1>
+      <p class="subtitle">
+        Paste text, press <strong>Read</strong>. It detects the language and
+        reads it aloud.
+      </p>
+
+      <textarea
+        id="text"
+        rows="8"
+        placeholder="Type or paste any text here…"
+        autofocus
+      ></textarea>
+
+      <div class="settings">
+        <label class="field">
+          <span>Voice</span>
+          <select id="voice">
+            <option value="">Auto-detect language</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Speed <em id="speedVal">1.0×</em></span>
+          <input id="speed" type="range" min="0.5" max="2" step="0.1" value="1" />
+        </label>
+
+        <label class="field">
+          <span>Volume <em id="volumeVal">100%</em></span>
+          <input id="volume" type="range" min="0" max="1" step="0.05" value="1" />
+        </label>
+      </div>
+
+      <div class="controls">
+        <button id="read" class="primary">▶ Read</button>
+        <button id="stop" disabled>■ Stop</button>
+        <span id="count" class="count"></span>
+      </div>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+      <audio id="player" hidden></audio>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

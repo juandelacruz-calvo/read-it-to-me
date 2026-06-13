@@ -1,0 +1,11 @@
+node_modules/
+
+# Downloaded at setup time — large, platform-specific, not committed.
+# Ignore the contents but keep the folders (via .gitkeep) so they exist on clone.
+bin/*
+voices/*
+!bin/.gitkeep
+!voices/.gitkeep
+
+*.log
+.DS_Store

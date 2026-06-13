@@ -1,0 +1,19 @@
+{
+  "name": "read-it-to-me",
+  "version": "1.0.0",
+  "description": "Paste text, click Read, and it detects the language and reads it aloud using a lightweight CPU TTS model (Piper).",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "download-voices": "node scripts/download.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "CC-BY-4.0",
+  "dependencies": {
+    "express": "^4.19.2",
+    "tinyld": "^1.3.4"
+  }
+}
